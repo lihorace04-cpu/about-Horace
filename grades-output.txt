@@ -1,0 +1,4 @@
+John	White	Grade is: B	Test Score is: 80	Lab Score is: 70
+Alisa	Brown	Grade is: C	Test Score is: 70	Lab Score is: 60
+Mike	Green	Grade is: D	Test Score is: 50	Lab Score is: 56
+horace	Li	Grade is: A	Test Score is: 99	Lab Score is: 80

@@ -1,0 +1,30 @@
+{
+  "method": "Actual local Java execution; source extracted from supplied DOCX without code changes",
+  "java": "JDK 25",
+  "cashier": {
+    "input": [
+      "2",
+      "1",
+      "0",
+      "9",
+      "1",
+      "0",
+      "1",
+      "101",
+      "1",
+      "2",
+      "3",
+      "1",
+      "0",
+      "10",
+      "20",
+      "2",
+      "0"
+    ],
+    "output": "========== SUPERMARKET SYSTEM ==========\r\n\n===== MAIN MENU =====\r\n1. Start Checkout\r\n2. Check Cash Box Balance\r\n0. Exit System\r\nEnter your choice: 💰 Cash Box Balance: 3000.0 USD\r\n\n===== MAIN MENU =====\r\n1. Start Checkout\r\n2. Check Cash Box Balance\r\n0. Exit System\r\nEnter your choice: \n===== PRODUCT LIST (with stock) =====\r\n1. Water  $2.5  Stock: 100\r\n2. Bread  $4.0  Stock: 50\r\n3. Milk  $8.0  Stock: 30\r\n4. Chips  $5.0  Stock: 40\r\n5. Coke  $3.5  Stock: 60\r\n0. Checkout\r\nEnter product ID: No items selected!\r\n\n===== PRODUCT LIST (with stock) =====\r\n1. Water  $2.5  Stock: 100\r\n2. Bread  $4.0  Stock: 50\r\n3. Milk  $8.0  Stock: 30\r\n4. Chips  $5.0  Stock: 40\r\n5. Coke  $3.5  Stock: 60\r\n0. Checkout\r\nEnter product ID: Invalid ID!\r\n\n===== PRODUCT LIST (with stock) =====\r\n1. Water  $2.5  Stock: 100\r\n2. Bread  $4.0  Stock: 50\r\n3. Milk  $8.0  Stock: 30\r\n4. Chips  $5.0  Stock: 40\r\n5. Coke  $3.5  Stock: 60\r\n0. Checkout\r\nEnter product ID: Enter quantity: Quantity must be > 0!\r\n\n===== PRODUCT LIST (with stock) =====\r\n1. Water  $2.5  Stock: 100\r\n2. Bread  $4.0  Stock: 50\r\n3. Milk  $8.0  Stock: 30\r\n4. Chips  $5.0  Stock: 40\r\n5. Coke  $3.5  Stock: 60\r\n0. Checkout\r\nEnter product ID: Enter quantity: ❌ Insufficient stock! Stock: 100\r\n\n===== PRODUCT LIST (with stock) =====\r\n1. Water  $2.5  Stock: 100\r\n2. Bread  $4.0  Stock: 50\r\n3. Milk  $8.0  Stock: 30\r\n4. Chips  $5.0  Stock: 40\r\n5. Coke  $3.5  Stock: 60\r\n0. Checkout\r\nEnter product ID: Enter quantity: ✅ Added: Water x2\r\n\n===== PRODUCT LIST (with stock) =====\r\n1. Water  $2.5  Stock: 98\r\n2. Bread  $4.0  Stock: 50\r\n3. Milk  $8.0  Stock: 30\r\n4. Chips  $5.0  Stock: 40\r\n5. Coke  $3.5  Stock: 60\r\n0. Checkout\r\nEnter product ID: Enter quantity: ✅ Added: Milk x1\r\n\n===== PRODUCT LIST (with stock) =====\r\n1. Water  $2.5  Stock: 98\r\n2. Bread  $4.0  Stock: 50\r\n3. Milk  $8.0  Stock: 29\r\n4. Chips  $5.0  Stock: 40\r\n5. Coke  $3.5  Stock: 60\r\n0. Checkout\r\nEnter product ID: \n=====================================\r\n           CASHIER RECEIPT           \r\n=====================================\r\nWater x2  Price:2.5  Subtotal:5.0\r\nMilk x1  Price:8.0  Subtotal:8.0\r\n-------------------------------------\r\nTotal Due: 13.0 USD\r\n=====================================\n\r\nEnter payment amount: Insufficient payment! Please try again.\r\nEnter payment amount: ✅ Paid: 20.0 USD\r\n✅ Change: 7.0 USD\r\n✅ Cash Box Balance: 3013.0 USD\r\n----------------------------------\r\nTransaction completed! Thank you!\r\n\n===== MAIN MENU =====\r\n1. Start Checkout\r\n2. Check Cash Box Balance\r\n0. Exit System\r\nEnter your choice: 💰 Cash Box Balance: 3013.0 USD\r\n\n===== MAIN MENU =====\r\n1. Start Checkout\r\n2. Check Cash Box Balance\r\n0. Exit System\r\nEnter your choice: System exited. Thank you!\r\n",
+    "excerpt": "=====================================\r\n           CASHIER RECEIPT           \r\n=====================================\r\nWater x2  Price:2.5  Subtotal:5.0\r\nMilk x1  Price:8.0  Subtotal:8.0\r\n-------------------------------------\r\nTotal Due: 13.0 USD\r\n=====================================\n\r\nEnter payment amount: Insufficient payment! Please try again.\r\nEnter payment amount: ✅ Paid: 20.0 USD\r\n✅ Change: 7.0 USD\r\n✅ Cash Box Balance: 3013.0 USD\r\n----------------------------------\r\nTransaction completed! Thank you!"
+  },
+  "grades": {
+    "output": "John\tWhite\tGrade is: B\tTest Score is: 80\tLab Score is: 70\r\nAlisa\tBrown\tGrade is: C\tTest Score is: 70\tLab Score is: 60\r\nMike\tGreen\tGrade is: D\tTest Score is: 50\tLab Score is: 56\r\nhorace\tLi\tGrade is: A\tTest Score is: 99\tLab Score is: 80\r\n"
+  }
+}

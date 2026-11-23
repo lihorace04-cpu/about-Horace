@@ -1,0 +1,102 @@
+========== SUPERMARKET SYSTEM ==========
+
+===== MAIN MENU =====
+1. Start Checkout
+2. Check Cash Box Balance
+0. Exit System
+Enter your choice: 💰 Cash Box Balance: 3000.0 USD
+
+===== MAIN MENU =====
+1. Start Checkout
+2. Check Cash Box Balance
+0. Exit System
+Enter your choice: 
+===== PRODUCT LIST (with stock) =====
+1. Water  $2.5  Stock: 100
+2. Bread  $4.0  Stock: 50
+3. Milk  $8.0  Stock: 30
+4. Chips  $5.0  Stock: 40
+5. Coke  $3.5  Stock: 60
+0. Checkout
+Enter product ID: No items selected!
+
+===== PRODUCT LIST (with stock) =====
+1. Water  $2.5  Stock: 100
+2. Bread  $4.0  Stock: 50
+3. Milk  $8.0  Stock: 30
+4. Chips  $5.0  Stock: 40
+5. Coke  $3.5  Stock: 60
+0. Checkout
+Enter product ID: Invalid ID!
+
+===== PRODUCT LIST (with stock) =====
+1. Water  $2.5  Stock: 100
+2. Bread  $4.0  Stock: 50
+3. Milk  $8.0  Stock: 30
+4. Chips  $5.0  Stock: 40
+5. Coke  $3.5  Stock: 60
+0. Checkout
+Enter product ID: Enter quantity: Quantity must be > 0!
+
+===== PRODUCT LIST (with stock) =====
+1. Water  $2.5  Stock: 100
+2. Bread  $4.0  Stock: 50
+3. Milk  $8.0  Stock: 30
+4. Chips  $5.0  Stock: 40
+5. Coke  $3.5  Stock: 60
+0. Checkout
+Enter product ID: Enter quantity: ❌ Insufficient stock! Stock: 100
+
+===== PRODUCT LIST (with stock) =====
+1. Water  $2.5  Stock: 100
+2. Bread  $4.0  Stock: 50
+3. Milk  $8.0  Stock: 30
+4. Chips  $5.0  Stock: 40
+5. Coke  $3.5  Stock: 60
+0. Checkout
+Enter product ID: Enter quantity: ✅ Added: Water x2
+
+===== PRODUCT LIST (with stock) =====
+1. Water  $2.5  Stock: 98
+2. Bread  $4.0  Stock: 50
+3. Milk  $8.0  Stock: 30
+4. Chips  $5.0  Stock: 40
+5. Coke  $3.5  Stock: 60
+0. Checkout
+Enter product ID: Enter quantity: ✅ Added: Milk x1
+
+===== PRODUCT LIST (with stock) =====
+1. Water  $2.5  Stock: 98
+2. Bread  $4.0  Stock: 50
+3. Milk  $8.0  Stock: 29
+4. Chips  $5.0  Stock: 40
+5. Coke  $3.5  Stock: 60
+0. Checkout
+Enter product ID: 
+=====================================
+           CASHIER RECEIPT           
+=====================================
+Water x2  Price:2.5  Subtotal:5.0
+Milk x1  Price:8.0  Subtotal:8.0
+-------------------------------------
+Total Due: 13.0 USD
+=====================================
+
+Enter payment amount: Insufficient payment! Please try again.
+Enter payment amount: ✅ Paid: 20.0 USD
+✅ Change: 7.0 USD
+✅ Cash Box Balance: 3013.0 USD
+----------------------------------
+Transaction completed! Thank you!
+
+===== MAIN MENU =====
+1. Start Checkout
+2. Check Cash Box Balance
+0. Exit System
+Enter your choice: 💰 Cash Box Balance: 3013.0 USD
+
+===== MAIN MENU =====
+1. Start Checkout
+2. Check Cash Box Balance
+0. Exit System
+Enter your choice: System exited. Thank you!
