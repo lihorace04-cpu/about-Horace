@@ -1,0 +1,52 @@
+[
+  {
+    "id": "math",
+    "file": "assets/courses/math.webp",
+    "method": "Built-in image_gen",
+    "kind": "Conceptual course illustration, not real coursework or classroom photography",
+    "prompt": "Use case: stylized-concept. Wide 16:9 premium editorial illustration for the course Mathematical Thinking. Clearly depict a MATHEMATICAL BRAINSTORMING session: three fictional young adult students collaborating around a large glass whiteboard, one pointing at a simple geometric problem, another placing a coral sticky note, the third sketching alternative connections. The board contains a visually clear mind map made of circles, arrows, small blank sticky notes, geometric diagrams and branching ideas, with no readable words or formulas. A lightbulb-shaped central idea symbol can be present as a small drawn icon. Express active discussion, multiple ideas and collective problem solving, not an individual studying alone and not just stationery. Restrained futuristic editorial 3D illustration, dark graphite room, warm ivory lighting, pale mint glass surfaces and subtle coral accents matching a science-fiction student portfolio. Natural anatomy, expressive collaborative gestures, clear whiteboard and faces, polished rendering, wide balanced composition. No logos, watermark, UI, legible writing, fake equations, big floating brain, giant orb or spiral. AI conceptual course illustration, not a real classroom or real students.",
+    "width": 1200,
+    "height": 675,
+    "bytes": 111322
+  },
+  {
+    "id": "robotics",
+    "file": "assets/courses/robotics.webp",
+    "method": "Built-in image_gen",
+    "kind": "Conceptual course illustration, not real coursework or classroom photography",
+    "prompt": "Use case: stylized-concept. Asset type: wide landscape course illustration for a bilingual student portfolio, approximately 16:9. Premium editorial 3D visual, charcoal graphite background #101415, ivory ceramic and translucent pale mint glass, tiny coral accents, precise physically rendered surfaces, directional studio light, subtle suspended particles, clear silhouettes, generous negative space, refined futuristic science-fiction art direction. Consistent visual family across courses. No words, no letters, no numbers, no formulas, no watermarks, no logos, no people, no website UI, no mockup. This is a conceptual course illustration, not a real classroom or a student-created project. Subject: A beautifully designed compact ivory educational robotic arm on a small graphite base, manipulating a translucent mint cube above a precise laboratory plinth; articulated joints and an understated luminous mint core, tangible friendly STEM robotics and artificial intelligence, not a humanoid face.",
+    "width": 1200,
+    "height": 675,
+    "bytes": 49946
+  },
+  {
+    "id": "algebra",
+    "file": "assets/courses/algebra.webp",
+    "method": "Built-in image_gen",
+    "kind": "Conceptual course illustration, not real coursework or classroom photography",
+    "prompt": "Use case: stylized-concept. Asset type: wide landscape course illustration for a bilingual student portfolio, approximately 16:9. Premium editorial 3D visual, charcoal graphite background #101415, ivory ceramic and translucent pale mint glass, tiny coral accents, precise physically rendered surfaces, directional studio light, subtle suspended particles, clear silhouettes, generous negative space, refined futuristic science-fiction art direction. Consistent visual family across courses. No words, no letters, no numbers, no formulas, no watermarks, no logos, no people, no website UI, no mockup. This is a conceptual course illustration, not a real classroom or a student-created project. Subject: An elegant three-dimensional lattice of translucent mint glass planes and connected ivory nodes, three intersecting spatial axes and carefully arranged geometric vectors represented by thin physical rods. A visual metaphor for discrete structures, matrices and linear algebra, organised and spatially clear, no mathematical text.",
+    "width": 1200,
+    "height": 675,
+    "bytes": 58208
+  },
+  {
+    "id": "statistics",
+    "file": "assets/courses/statistics.webp",
+    "method": "Built-in image_gen",
+    "kind": "Conceptual course illustration, not real coursework or classroom photography",
+    "prompt": "Use case: stylized-concept. Asset type: wide landscape course illustration for a bilingual student portfolio, approximately 16:9. Premium editorial 3D visual, charcoal graphite background #101415, ivory ceramic and translucent pale mint glass, tiny coral accents, precise physically rendered surfaces, directional studio light, subtle suspended particles, clear silhouettes, generous negative space, refined futuristic science-fiction art direction. Consistent visual family across courses. No words, no letters, no numbers, no formulas, no watermarks, no logos, no people, no website UI, no mockup. This is a conceptual course illustration, not a real classroom or a student-created project. Subject: A precise editorial arrangement of translucent mint glass data columns at varied heights on a graphite plinth, a cloud of small glowing data points and one graceful coral trend curve passing through the scene. Beautiful tangible data sculpture, no labels and no misleading numerical axis, no dashboard.",
+    "width": 1200,
+    "height": 675,
+    "bytes": 60716
+  },
+  {
+    "id": "story",
+    "file": "assets/courses/story.webp",
+    "method": "Built-in image_gen",
+    "kind": "Conceptual course illustration, not real coursework or classroom photography",
+    "prompt": "Use case: stylized-concept. Wide 16:9 original cinematic illustration for a digital storytelling course. An open ivory book on a dark graphite surface, from its pages a delicate three-dimensional story world rises: a small lone traveller with a coral scarf follows a mint-lit path across a tiny arched bridge toward a glowing futuristic city gate, with layered paper-like mountains and a subtle night sky behind. A sculptural visual story with a beginning, journey and destination, magical but refined, immersive scale and atmospheric depth. Premium editorial 3D render, ivory paper, translucent pale mint light, small coral accents, realistic crafted materials, carefully composed and clear silhouettes, cinematic directional lighting. No text, no book lettering, no interface, no logos, no watermark, no film-strip frames, no repeated landscape screens. AI conceptual course artwork, not student project evidence.",
+    "width": 1200,
+    "height": 675,
+    "bytes": 136646
+  }
+]

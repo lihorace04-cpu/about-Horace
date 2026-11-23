@@ -1,0 +1,8 @@
+{
+  "mode": "built-in image_gen",
+  "use_case": "stylized-concept",
+  "prompt": "Use case: stylized-concept. Asset type: empty raster backdrop for THE VEIL website, landscape 1920x1080 intent, 16:9. Input image 1 is composition and palette reference only. Recreate ONLY the empty background environment of the reference: almost black charcoal digital theater void, matte subtle atmospheric grain, one broad very dark burgundy translucent angled light plane descending diagonally from upper left-of-center toward lower right-of-center, soft layered dark wine-red gradients, a minimal dark polished stage floor limited to the bottom 15% with faint fragmented horizontal dark red reflections and a subtle thin red diagonal floor edge across bottom left. Keep same understated black, charcoal and deep burgundy palette as reference. Central and right area mostly nearly black and uncluttered so foreground card and text can be overlaid later. Dramatic but extremely low-key lighting, no bright neon. Background-only environment, no focal object. Remove ALL foreground elements: absolutely NO playing cards, glass panels, mask, rabbit, character, icons, symbols, lettering, text, typography, logo, buttons, UI, interface, navigation, frame, gold, opera ornament, furniture, gold curtains, stars or bright light sources. Deliver a single finished flat background image with no borders. Opaque background.",
+  "reference": "C:\\Users\\lihao\\.codex\\generated_images\\01a1bb46-9f0c-7a50-8e16-6cf899d5546f\\exec-c11932e9-c6fb-4207-ba00-c5cd45c7b15b.png",
+  "output": "backdrop.png",
+  "transparent_background": false
+}
