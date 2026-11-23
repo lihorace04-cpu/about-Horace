@@ -1,0 +1,27 @@
+(() => {
+  const get=(key,fallback)=>{try{return localStorage.getItem('veil-'+key)||fallback}catch{return fallback}};
+  const set=(key,value)=>{try{localStorage.setItem('veil-'+key,value)}catch{}};
+  const html=document.documentElement;
+  const systemReduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let reduced=get('motion',systemReduced?'reduced':'full')==='reduced';
+  const translate=()=>{const en=html.dataset.language==='en';html.lang=en?'en':'zh-Hans';document.querySelectorAll('.language').forEach(e=>e.textContent=en?'中文':'EN');document.dispatchEvent(new CustomEvent('veil:language'))};
+  html.dataset.language=get('language','zh');translate();
+  document.querySelectorAll('.language').forEach(e=>e.addEventListener('click',()=>{html.dataset.language=html.dataset.language==='en'?'zh':'en';set('language',html.dataset.language);translate()}));
+  const updateMotion=()=>{html.dataset.motion=reduced?'reduced':'full';document.querySelectorAll('.motion-toggle').forEach(e=>e.setAttribute('aria-pressed',String(reduced)));window.VEIL_REDUCED=reduced;document.dispatchEvent(new CustomEvent('veil:motion',{detail:reduced}))};
+  updateMotion();document.querySelectorAll('.motion-toggle').forEach(e=>e.addEventListener('click',()=>{reduced=!reduced;set('motion',reduced?'reduced':'full');updateMotion()}));
+  window.VeilPrefs={get,set};
+  const slides=[...document.querySelectorAll('.course-slide')];
+  if(slides.length){let index=0,paused=reduced,timer;const book=slides.find(s=>s.querySelector('img').src.includes('/story.'));book?.classList.add('storybook');
+    const show=i=>{index=(i+slides.length)%slides.length;slides.forEach((s,j)=>s.hidden=j!==index);document.querySelectorAll('[data-course-select]').forEach((e,j)=>e.setAttribute('aria-pressed',String(j===index)))};
+    const restart=()=>{clearTimeout(timer);if(!paused&&!reduced&&!document.hidden)timer=setTimeout(()=>{show(index+1);restart()},index===4?10000:8000)};
+    document.querySelectorAll('[data-gallery]').forEach(e=>e.addEventListener('click',()=>{if(e.dataset.gallery==='toggle'){paused=!paused;e.setAttribute('aria-pressed',String(paused));e.innerHTML=paused?'<span class="bi"><span lang="zh-Hans">继续轮播</span><span lang="en">Resume slideshow</span></span>':'<span class="bi"><span lang="zh-Hans">暂停轮播</span><span lang="en">Pause slideshow</span></span>'}else show(index+(e.dataset.gallery==='next'?1:-1));restart()}));
+    document.querySelectorAll('[data-course-select]').forEach(e=>e.addEventListener('click',()=>{show(+e.dataset.courseSelect);restart()}));
+    document.addEventListener('visibilitychange',restart);document.addEventListener('veil:motion',e=>{reduced=e.detail;paused=reduced;restart()});
+    document.querySelector('.course-gallery').addEventListener('focusin',()=>clearTimeout(timer));document.querySelector('.course-gallery').addEventListener('focusout',restart);document.querySelector('.course-gallery').addEventListener('mouseenter',()=>clearTimeout(timer));document.querySelector('.course-gallery').addEventListener('mouseleave',restart);
+    if(book){const turn=document.createElement('span');turn.className='book-turn';turn.setAttribute('aria-hidden','true');book.append(turn);const scenes=[['启程','Departure'],['旅途','The journey'],['抵达','Arrival']];let page=0;const control=document.createElement('button');control.className='story-page';control.type='button';book.append(control);const paint=()=>{control.innerHTML='<span class="bi"><span lang="zh-Hans">'+scenes[page][0]+' · 翻下一页</span><span lang="en">'+scenes[page][1]+' · Turn the page</span></span>';book.dataset.bookPage=page};const next=()=>{page=(page+1)%3;paint();turn.classList.remove('turning');void turn.offsetWidth;turn.classList.add('turning')};control.addEventListener('click',next);setInterval(()=>{if(index===4&&!paused&&!reduced&&!document.hidden)next()},3000);paint()}
+    if('IntersectionObserver' in window)new IntersectionObserver(items=>{if(items[0].isIntersecting)restart();else clearTimeout(timer)},{threshold:.15}).observe(document.querySelector('.course-gallery'));restart();
+  }
+  if('IntersectionObserver' in window){const observer=new IntersectionObserver(items=>items.forEach(item=>{if(item.isIntersecting){if(!window.VEIL_REDUCED)item.target.classList.add('scroll-enter');observer.unobserve(item.target)}}),{threshold:.12});document.querySelectorAll('.archive-main>section,.project-sheet,.experience-sheet,.profile-facts').forEach(e=>observer.observe(e))}
+  const ranges=[...document.querySelectorAll('[data-skill]')];
+  if(ranges.length){let saved={};try{saved=JSON.parse(get('skill-values','{}'))}catch{};const update=e=>{document.getElementById(e.dataset.skill+'-value').value=e.value};ranges.forEach(e=>{if(Number.isFinite(+saved[e.dataset.skill]))e.value=saved[e.dataset.skill];update(e);e.addEventListener('input',()=>{update(e);set('skill-values',JSON.stringify(Object.fromEntries(ranges.map(r=>[r.dataset.skill,+r.value]))))})});document.getElementById('edit-skills').addEventListener('click',e=>{const enabled=ranges[0].disabled;ranges.forEach(r=>r.disabled=!enabled);e.currentTarget.setAttribute('aria-pressed',String(enabled));document.getElementById('skill-status').innerHTML=enabled?'<span class="bi"><span lang="zh-Hans">仅保存在本机，不是测评结果</span><span lang="en">Saved locally; not measured proficiency</span></span>':''});document.getElementById('reset-skills').addEventListener('click',()=>{ranges.forEach((e,i)=>{e.value=[70,50,60][i];update(e)});set('skill-values','{}')})}
+})();

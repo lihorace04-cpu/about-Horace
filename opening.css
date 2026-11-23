@@ -1,0 +1,67 @@
+.front .prologue h1{font-size:24px;line-height:1.25}
+.front .prologue h1 .given-name{display:block;font:500 clamp(48px,5vw,76px)/1.08 var(--serif);letter-spacing:-.035em}
+.front .prologue .act-copy .subtitle{font-size:clamp(16px,1.4vw,22px);font-style:normal;white-space:normal;margin-top:17px;color:#ef91ac}
+.front .prologue .stage-prose{font-size:15px;margin-top:30px}
+.front .invitation-translation{font-size:20px;margin-bottom:24px}
+.front .signal-wordmark>span{font-size:clamp(65px,9.2vw,142px);letter-spacing:-.04em;line-height:.85}
+.front .signal-wordmark{bottom:8%;left:3%;text-shadow:0 8px 25px #08080dc0}
+.front .signal-wordmark small{margin-top:15px;letter-spacing:.16em}
+.front .signal-wordmark p{font-size:12px;margin-top:12px;letter-spacing:.18em}
+.front .scene-caption{display:flex;flex-direction:row;align-items:center;gap:20px}
+.replay-opening{display:flex;align-items:center;gap:6px;min-height:44px;font-size:11px;color:#dfcad3;pointer-events:auto}
+.front .scene-caption .replay-opening .bi,.front .scene-caption .replay-opening [lang]{font:inherit;letter-spacing:inherit;color:inherit}
+.replay-opening svg{width:15px;height:15px}.replay-opening:hover{color:white}
+.opening-film{position:fixed;inset:0;z-index:80;pointer-events:none;overflow:hidden;isolation:isolate}
+.opening-film[hidden]{display:none}
+.film-curtain{position:absolute;inset:-15%;background:#120b12 url('assets/signal/backdrop.webp') center/cover;will-change:transform;pointer-events:none}
+.curtain-left{clip-path:polygon(0 0,62% 0,43% 100%,0 100%)}
+.curtain-right{clip-path:polygon(62% 0,100% 0,100% 100%,43% 100%);filter:brightness(.65)}
+.film-name{position:absolute;top:39%;width:100%;text-align:center;color:#f1e9ec;font:500 clamp(68px,13vw,190px)/1 var(--serif);letter-spacing:-.04em;text-shadow:0 15px 40px #0008;will-change:transform,opacity}
+.film-name>span{display:inline-block;transform-origin:50% 80%}
+.film-name p{margin:26px auto 0;text-align:center;font:14px/1.7 var(--sans);letter-spacing:.18em;color:#e3bacb}
+.skip-opening{position:absolute;right:4%;top:30px;min-height:44px;padding:8px 14px;border:1px solid #a77489;background:#160d15;color:#f3dce6;pointer-events:auto;font-size:12px}
+.skip-opening span[aria-hidden]{margin-left:16px}
+.opening-shards{display:none;position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.opening-shard{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center bottom;will-change:transform,opacity}
+.is-opening .opening-shards{display:block}
+.is-opening .film-curtain.curtain-left{animation:curtain-part-left 1.55s .55s cubic-bezier(.76,0,.24,1) both}
+.is-opening .film-curtain.curtain-right{animation:curtain-part-right 1.55s .55s cubic-bezier(.76,0,.24,1) both}
+.is-opening .film-name{animation:name-depart 1s .9s cubic-bezier(.16,1,.3,1) both}
+.is-opening .film-name>span{animation:name-arrive .75s calc(var(--letter)*45ms) cubic-bezier(.16,1,.3,1) both}
+.is-opening .skip-opening{animation:skip-retire .3s 2.6s both}
+.is-opening .hero-art{animation:solid-arrive .55s 1.9s both}
+.is-opening .opening-shard{animation:glass-assemble 1.3s calc(.75s + var(--piece)*60ms) cubic-bezier(.16,1,.3,1) both}
+.is-opening .echo-art{animation:echo-land 1s 1.8s cubic-bezier(.16,1,.3,1) both}
+.is-opening .signal-wordmark{animation:signature-arrive .8s 1.2s cubic-bezier(.16,1,.3,1) both}
+@keyframes curtain-part-left{to{transform:translateX(-102%) rotate(-6deg)}}
+@keyframes curtain-part-right{to{transform:translateX(102%) rotate(6deg)}}
+@keyframes name-arrive{from{opacity:.2;transform:translateY(30px) rotateX(65deg);filter:blur(6px)}to{opacity:1;transform:none;filter:blur(0)}}
+@keyframes name-depart{0%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1.18) translateY(-22px);filter:blur(5px)}}
+@keyframes solid-arrive{from{opacity:0}to{opacity:1}}
+@keyframes glass-assemble{0%{opacity:0;transform:translate(var(--scatter-x),var(--scatter-y)) rotate(var(--scatter-r)) scale(.8)}30%{opacity:.8}85%{opacity:1;transform:none}100%{opacity:0;transform:none}}
+@keyframes echo-land{0%{opacity:0;transform:translate(70px,-130px) rotate(16deg)}65%{opacity:1;transform:translate(0,6px) rotate(-7deg)}100%{opacity:1;transform:rotate(-3deg)}}
+@keyframes signature-arrive{from{opacity:0;clip-path:inset(0 100% 0 0);transform:translateX(-25px)}to{opacity:1;clip-path:inset(0);transform:none}}
+@keyframes skip-retire{to{opacity:0}}
+@media(min-width:761px) and (max-width:1100px){.front .prologue h1 .given-name{font-size:51px}.front .prologue .stage-prose{font-size:13px}.front .scene-caption{gap:9px}.front .signal-wordmark>span{font-size:9vw}}
+@media(max-width:760px){.front .prologue h1{font-size:22px}.front .prologue h1 .given-name{font-size:60px}.front .prologue .subtitle{font-size:17px}.front .prologue .stage-prose{margin-top:18px;margin-bottom:440px;font-size:14px}.front .signal-wordmark{top:735px;bottom:auto;left:7%}.front .signal-wordmark>span{font-size:60px}.hands-on .signal-art{top:400px}.hands-on .mask-hit{top:390px}.front .scene-caption{top:795px;right:7%;bottom:auto;gap:22px}.front .prologue{min-height:1080px}.film-name{top:37%;font-size:17vw}.film-name p{font-size:11px;letter-spacing:.08em;margin-top:18px}.skip-opening{top:20px;right:6%;font-size:11px}.front[data-act='0'] #scene{top:420px;height:430px}}
+@media(prefers-reduced-motion:reduce){.opening-film,.opening-shards{display:none!important}.is-opening .hero-art,.is-opening .echo-art,.is-opening .signal-wordmark{animation:none!important}}
+html[data-motion=reduced] .opening-film,html[data-motion=reduced] .opening-shards{display:none!important}
+.front.hands-on .prologue .scene-caption{position:static;inset:auto;margin-top:16px;justify-content:space-between;gap:12px;pointer-events:auto}
+@media(min-width:761px) and (max-width:1100px){
+ .front[data-act='0'] .signal-art{height:auto;aspect-ratio:3/4;top:20%}
+ .front .prologue .invitation-translation{display:none}
+ .front .prologue .stage-prose{margin-top:24px;margin-bottom:20px}
+ .front .prologue .action{padding:12px 16px;font-size:14px}
+ .front .prologue .replay-opening,.front .prologue .mask-view{font-size:9px}
+}
+@media(max-width:760px){
+ .front.hands-on .prologue{min-height:1000px}
+ .front.hands-on .prologue .stage-prose{margin-bottom:400px}
+ .front.hands-on[data-act='0'] .signal-art{top:390px;height:350px}
+ .front.hands-on .prologue .mask-hit{top:285px;height:350px;left:10%;width:80%}
+ .front.hands-on .prologue .grab-caption{bottom:10%;left:30%}
+ .front.hands-on .signal-wordmark{top:695px}
+ .front.hands-on .scene-caption{top:760px}
+ .front[data-act='0'] #scene{top:390px;height:350px}
+ .front .chapter-nav button>.bi{max-width:100%;text-align:center;overflow-wrap:anywhere;line-height:1.4}
+}
